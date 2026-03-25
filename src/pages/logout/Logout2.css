@@ -1,0 +1,148 @@
+.lo2-root {
+  min-height: 100vh;
+  background: #030b15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lo2-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(56,189,248,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.lo2-panel {
+  background: #0a1628;
+  border: 1px solid #1e3a5f;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lo2-avatar-wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+}
+
+.lo2-avatar-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(56,189,248,0.3);
+  animation: lo2-spin 4s linear infinite;
+  border-top-color: #38bdf8;
+}
+
+@keyframes lo2-spin { to { transform: rotate(360deg); } }
+
+.lo2-panel h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0f9ff;
+  margin-bottom: 0.5rem;
+}
+
+.lo2-panel p {
+  color: #4d7a9e;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.lo2-actions { display: flex; gap: 0.75rem; }
+
+.lo2-cancel {
+  flex: 1;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid #1e3a5f;
+  color: #4d7a9e;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lo2-cancel:hover { border-color: #38bdf8; color: #7dd3fc; }
+
+.lo2-confirm {
+  flex: 1;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #0369a1, #38bdf8);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(56,189,248,0.3);
+}
+
+.lo2-disintegrate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.lo2-avatar-dissolve {
+  position: absolute;
+}
+
+.lo2-particle {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lo2-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.lo2-done h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f0f9ff;
+  margin-top: 0.5rem;
+}
+
+.lo2-done p {
+  color: #4d7a9e;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.lo2-back {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid #1e3a5f;
+  color: #38bdf8;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.lo2-back:hover { border-color: #38bdf8; background: rgba(56,189,248,0.06); }

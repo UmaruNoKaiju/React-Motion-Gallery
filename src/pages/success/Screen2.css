@@ -1,0 +1,92 @@
+.sc2-root {
+  min-height: 100vh;
+  background: #030b15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sc2-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(3,105,161,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(56,189,248,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.sc2-stage {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 1rem;
+}
+
+.sc2-hex {
+  position: absolute;
+  filter: drop-shadow(0 0 8px rgba(56,189,248,0.4));
+}
+
+.sc2-hex-center {
+  filter: drop-shadow(0 0 16px rgba(56,189,248,0.7));
+  z-index: 2;
+}
+
+.sc2-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #38bdf8 30%, transparent 70%);
+}
+
+.sc2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+  z-index: 1;
+}
+
+.sc2-icon-wrap {
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 20px rgba(56,189,248,0.6));
+}
+
+.sc2-word {
+  display: block;
+  font-weight: 900;
+  color: #f0f9ff;
+  line-height: 1.1;
+}
+
+.sc2-word-0 { font-size: 1.1rem; color: #38bdf8; letter-spacing: 0.1em; }
+.sc2-word-1 { font-size: 2.6rem; }
+.sc2-word-2 { font-size: 2.6rem; }
+
+.sc2-content p {
+  color: #4d7a9e;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sc2-btn {
+  padding: 0.85rem 2.5rem;
+  background: linear-gradient(135deg, #0369a1, #38bdf8);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(56,189,248,0.35);
+}

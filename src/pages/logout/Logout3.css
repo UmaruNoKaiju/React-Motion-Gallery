@@ -1,0 +1,160 @@
+.lo3-root {
+  min-height: 100vh;
+  background: #0a0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lo3-door {
+  position: fixed;
+  top: 0; bottom: 0;
+  width: 50%;
+  background: #060c16;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lo3-door-left  { left: 0; border-right: 1px solid #1e3a5f; }
+.lo3-door-right { right: 0; border-left: 1px solid #1e3a5f; }
+
+.lo3-door-detail {
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, rgba(56,189,248,0.15), transparent);
+  border-radius: 2px;
+}
+
+.lo3-door-handle {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1e3a5f;
+  border: 1px solid #38bdf8;
+  transform: translateY(-50%);
+}
+
+.lo3-handle-right { right: 16px; }
+.lo3-handle-left  { left: 16px; }
+
+.lo3-light {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(245,158,11,0.15) 0%, transparent 70%);
+  z-index: 19;
+  pointer-events: none;
+}
+
+.lo3-card {
+  background: #0d1b2e;
+  border: 1px solid #1e3a5f;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lo3-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.lo3-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0f9ff;
+  margin-bottom: 0.5rem;
+}
+
+.lo3-card p {
+  color: #4d7a9e;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.lo3-actions { display: flex; gap: 0.75rem; }
+
+.lo3-cancel {
+  flex: 1;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid #1e3a5f;
+  color: #4d7a9e;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lo3-cancel:hover { border-color: #38bdf8; color: #7dd3fc; }
+
+.lo3-confirm {
+  flex: 1;
+  padding: 0.8rem;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.3);
+  color: #f59e0b;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lo3-confirm:hover { background: rgba(245,158,11,0.18); }
+
+.lo3-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.lo3-done h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.lo3-done p {
+  color: #334155;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.lo3-back {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid #1e293b;
+  color: #475569;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lo3-back:hover { border-color: #334155; color: #64748b; }

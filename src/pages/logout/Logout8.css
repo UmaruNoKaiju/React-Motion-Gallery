@@ -1,0 +1,147 @@
+.lo8-root {
+  min-height: 100vh;
+  background: #02040a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lo8-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+}
+
+.lo8-warp {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.lo8-warp-line {
+  position: absolute;
+  top: 0; left: 0;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(129,140,248,0.8), transparent);
+  transform-origin: left center;
+}
+
+.lo8-card {
+  background: #080c1a;
+  border: 1px solid rgba(129,140,248,0.2);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 60px rgba(79,70,229,0.1), 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.lo8-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(79,70,229,0.08);
+  border: 1px solid rgba(129,140,248,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.lo8-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0f9ff;
+  margin-bottom: 0.5rem;
+}
+
+.lo8-card p {
+  color: #312e81;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.lo8-actions { display: flex; gap: 0.75rem; }
+
+.lo8-cancel {
+  flex: 1;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid rgba(129,140,248,0.15);
+  color: #4338ca;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lo8-cancel:hover { border-color: #818cf8; color: #a5b4fc; }
+
+.lo8-confirm {
+  flex: 1;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #4f46e5, #818cf8);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(79,70,229,0.4);
+}
+
+.lo8-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.lo8-done-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lo8-done h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0f9ff;
+  margin-top: 3rem;
+}
+
+.lo8-done p {
+  color: #312e81;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.lo8-back {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(129,140,248,0.3);
+  color: #818cf8;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lo8-back:hover { background: rgba(129,140,248,0.08); }

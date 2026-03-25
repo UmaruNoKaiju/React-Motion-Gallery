@@ -1,0 +1,19 @@
+.lo12-root { min-height:100vh; background:#0d0a00; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; font-family:'Segoe UI',sans-serif; }
+.lo12-card { background:#141000; border:1px solid rgba(251,191,36,0.15); border-radius:24px; padding:2.5rem 2rem; width:100%; max-width:380px; text-align:center; z-index:1; box-shadow:0 20px 60px rgba(0,0,0,0.6); }
+.lo12-clock-wrap { display:flex; justify-content:center; margin-bottom:1.5rem; filter:drop-shadow(0 0 16px rgba(251,191,36,0.3)); }
+.lo12-card h2 { font-size:1.6rem; font-weight:800; color:#fffbeb; margin-bottom:0.5rem; }
+.lo12-card p { color:#78350f; font-size:0.9rem; margin-bottom:2rem; }
+.lo12-actions { display:flex; gap:0.75rem; }
+.lo12-cancel { flex:1; padding:0.8rem; background:transparent; border:1px solid rgba(251,191,36,0.15); color:#92400e; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
+.lo12-cancel:hover { border-color:#fbbf24; color:#fde68a; }
+.lo12-confirm { flex:1; padding:0.8rem; background:linear-gradient(135deg,#d97706,#fbbf24); border:none; color:#1c1000; border-radius:10px; font-size:0.9rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(251,191,36,0.3); }
+.lo12-spinning { display:flex; flex-direction:column; align-items:center; gap:1rem; z-index:1; position:relative; }
+.lo12-confetti-origin { position:absolute; top:50%; left:50%; pointer-events:none; }
+.lo12-piece { position:absolute; border-radius:2px; transform:translate(-50%,-50%); }
+.lo12-spin-label { color:#92400e; font-size:0.85rem; letter-spacing:0.08em; }
+.lo12-done { display:flex; flex-direction:column; align-items:center; gap:0.5rem; text-align:center; z-index:1; }
+.lo12-done-icon { filter:drop-shadow(0 0 16px rgba(251,191,36,0.4)); margin-bottom:0.5rem; }
+.lo12-done h3 { font-size:1.5rem; font-weight:800; color:#fffbeb; }
+.lo12-done p { color:#78350f; font-size:0.9rem; margin-bottom:1rem; }
+.lo12-back { padding:0.8rem 2rem; background:transparent; border:1px solid rgba(251,191,36,0.2); color:#fbbf24; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.lo12-back:hover { background:rgba(251,191,36,0.06); }

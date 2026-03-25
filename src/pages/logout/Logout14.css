@@ -1,0 +1,18 @@
+.lo14-root { min-height:100vh; background:#0d0005; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; font-family:'Segoe UI',sans-serif; }
+.lo14-spiral-wrap { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:20; pointer-events:none; }
+.lo14-ring { position:absolute; border-radius:50%; border:2px solid rgba(251,113,133,0.4); }
+.lo14-vortex { position:absolute; width:100px; height:100px; border-radius:50%; background:radial-gradient(circle,#e11d48,transparent 70%); }
+.lo14-card { background:#130008; border:1px solid rgba(251,113,133,0.15); border-radius:24px; padding:2.5rem 2rem; width:100%; max-width:380px; text-align:center; z-index:1; box-shadow:0 20px 60px rgba(0,0,0,0.6); }
+.lo14-icon { width:72px; height:72px; border-radius:50%; background:rgba(251,113,133,0.06); border:1px solid rgba(251,113,133,0.15); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; }
+.lo14-card h2 { font-size:1.6rem; font-weight:800; color:#fff1f2; margin-bottom:0.5rem; }
+.lo14-card p { color:#881337; font-size:0.9rem; margin-bottom:2rem; }
+.lo14-actions { display:flex; gap:0.75rem; }
+.lo14-cancel { flex:1; padding:0.8rem; background:transparent; border:1px solid rgba(251,113,133,0.15); color:#9f1239; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
+.lo14-cancel:hover { border-color:#fb7185; color:#fda4af; }
+.lo14-confirm { flex:1; padding:0.8rem; background:linear-gradient(135deg,#e11d48,#fb7185); border:none; color:#fff; border-radius:10px; font-size:0.9rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(225,29,72,0.35); }
+.lo14-done { display:flex; flex-direction:column; align-items:center; gap:0.5rem; text-align:center; z-index:1; position:relative; }
+.lo14-done-inner { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
+.lo14-done h3 { font-size:1.5rem; font-weight:800; color:#fff1f2; margin-top:4rem; }
+.lo14-done p { color:#881337; font-size:0.9rem; margin-bottom:1rem; }
+.lo14-back { padding:0.8rem 2rem; background:transparent; border:1px solid rgba(251,113,133,0.2); color:#fb7185; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.lo14-back:hover { background:rgba(251,113,133,0.06); }

@@ -1,0 +1,107 @@
+.lsc-wrapper {
+  min-height: 100vh;
+  background: #07111f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lsc-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.lsc-nav-btn {
+  background: transparent;
+  border: 1px solid #1e3a5f;
+  color: #4d7a9e;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lsc-nav-btn:hover { color: #38bdf8; border-color: #38bdf8; }
+
+.lsc-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #f0f9ff;
+  margin-bottom: 0.4rem;
+}
+
+.lsc-header p { color: #4d7a9e; font-size: 0.95rem; }
+
+.lsc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 860px;
+}
+
+.lsc-card {
+  background: #0a1628;
+  border: 1px solid #1e3a5f;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s;
+}
+
+.lsc-card:hover { border-color: #38bdf8; }
+
+.lsc-number {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #0369a1, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lsc-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e0f2fe;
+}
+
+.lsc-desc {
+  font-size: 0.75rem;
+  color: #4d7a9e;
+}
+
+.lsc-arrow {
+  color: #1e3a5f;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.lsc-back-pill {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10,22,40,0.92);
+  border: 1px solid #1e3a5f;
+  color: #4d7a9e;
+  padding: 0.5rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  transition: color 0.2s, border-color 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lsc-back-pill:hover { color: #38bdf8; border-color: #38bdf8; }

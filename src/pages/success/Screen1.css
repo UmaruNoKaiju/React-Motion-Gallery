@@ -1,0 +1,113 @@
+.sc1-root {
+  min-height: 100vh;
+  background: #030b15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sc1-bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sc1-stage {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc1-particle {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sc1-flash {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #38bdf8 40%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sc1-check-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 20px rgba(56,189,248,0.7));
+}
+
+.sc1-ring {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid rgba(56,189,248,0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sc1-text {
+  text-align: center;
+  z-index: 1;
+}
+
+.sc1-label {
+  display: block;
+  color: #38bdf8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.8rem;
+}
+
+.sc1-text h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #f0f9ff;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+}
+
+.sc1-text p {
+  color: #4d7a9e;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.sc1-btn {
+  padding: 0.9rem 2.8rem;
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sc1-btn:hover {
+  background: #38bdf8;
+  color: #030b15;
+}

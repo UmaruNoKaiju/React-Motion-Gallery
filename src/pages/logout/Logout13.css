@@ -1,0 +1,16 @@
+.lo13-root { min-height:100vh; background:#00080d; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; font-family:'Segoe UI',sans-serif; }
+.lo13-scanline { position:absolute; inset:0; background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(34,211,238,0.015) 3px,rgba(34,211,238,0.015) 4px); pointer-events:none; }
+.lo13-pixel { position:fixed; border-radius:2px; pointer-events:none; z-index:20; }
+.lo13-card { background:#001018; border:1px solid rgba(34,211,238,0.15); border-radius:24px; padding:2.5rem 2rem; width:100%; max-width:380px; text-align:center; z-index:1; box-shadow:0 0 60px rgba(34,211,238,0.06),0 20px 60px rgba(0,0,0,0.6); }
+.lo13-icon { width:72px; height:72px; border-radius:50%; background:rgba(34,211,238,0.06); border:1px solid rgba(34,211,238,0.15); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; }
+.lo13-card h2 { font-size:1.6rem; font-weight:800; color:#ecfeff; margin-bottom:0.5rem; }
+.lo13-card p { color:#164e63; font-size:0.9rem; margin-bottom:2rem; }
+.lo13-actions { display:flex; gap:0.75rem; }
+.lo13-cancel { flex:1; padding:0.8rem; background:transparent; border:1px solid rgba(34,211,238,0.12); color:#155e75; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
+.lo13-cancel:hover { border-color:#22d3ee; color:#67e8f9; }
+.lo13-confirm { flex:1; padding:0.8rem; background:linear-gradient(135deg,#0891b2,#22d3ee); border:none; color:#fff; border-radius:10px; font-size:0.9rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(34,211,238,0.3); }
+.lo13-done { display:flex; flex-direction:column; align-items:center; gap:0.5rem; text-align:center; z-index:1; }
+.lo13-done h3 { font-size:1.5rem; font-weight:800; color:#ecfeff; margin-top:0.5rem; }
+.lo13-done p { color:#164e63; font-size:0.9rem; margin-bottom:1rem; }
+.lo13-back { padding:0.8rem 2rem; background:transparent; border:1px solid rgba(34,211,238,0.2); color:#22d3ee; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.lo13-back:hover { background:rgba(34,211,238,0.06); }

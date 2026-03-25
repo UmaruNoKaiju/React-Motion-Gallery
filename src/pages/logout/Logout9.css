@@ -1,0 +1,141 @@
+.lo9-root {
+  min-height: 100vh;
+  background: #030f0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lo9-bg-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg, transparent, transparent 28px,
+    rgba(52,211,153,0.03) 28px, rgba(52,211,153,0.03) 29px
+  );
+  pointer-events: none;
+}
+
+.lo9-curtain {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, #030f0a, #041a0e);
+  z-index: 20;
+}
+
+.lo9-drop {
+  position: fixed;
+  top: 0;
+  width: 1.5px;
+  background: linear-gradient(to bottom, transparent, rgba(52,211,153,0.6), transparent);
+  border-radius: 1px;
+  z-index: 21;
+  pointer-events: none;
+}
+
+.lo9-card {
+  background: #071a0f;
+  border: 1px solid rgba(52,211,153,0.15);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 60px rgba(5,150,105,0.08), 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lo9-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(52,211,153,0.06);
+  border: 1px solid rgba(52,211,153,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.lo9-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0fdf4;
+  margin-bottom: 0.5rem;
+}
+
+.lo9-card p {
+  color: #064e3b;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.lo9-actions { display: flex; gap: 0.75rem; }
+
+.lo9-cancel {
+  flex: 1;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid rgba(52,211,153,0.12);
+  color: #065f46;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lo9-cancel:hover { border-color: #34d399; color: #6ee7b7; }
+
+.lo9-confirm {
+  flex: 1;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #059669, #34d399);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(52,211,153,0.3);
+}
+
+.lo9-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.lo9-done h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f0fdf4;
+  margin-top: 0.5rem;
+}
+
+.lo9-done p {
+  color: #064e3b;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.lo9-back {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(52,211,153,0.2);
+  color: #34d399;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lo9-back:hover { background: rgba(52,211,153,0.06); }

@@ -1,0 +1,18 @@
+.lo17-root { min-height:100vh; background:#001a0f; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; font-family:'Segoe UI',sans-serif; perspective:600px; }
+.lo17-water { position:absolute; bottom:0; left:0; right:0; height:200px; pointer-events:none; overflow:hidden; }
+.lo17-wave { position:absolute; bottom:0; left:-50%; width:200%; height:120px; background:rgba(52,211,153,0.04); border-radius:40%; animation:lo17wave 6s linear infinite; }
+@keyframes lo17wave { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+.lo17-ripple { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:80px; height:80px; border-radius:50%; border:2px solid rgba(52,211,153,0.4); z-index:20; pointer-events:none; }
+.lo17-card { background:#001a0f; border:1px solid rgba(52,211,153,0.15); border-radius:24px; padding:2.5rem 2rem; width:100%; max-width:380px; text-align:center; z-index:1; box-shadow:0 20px 60px rgba(0,0,0,0.6); }
+.lo17-icon { width:72px; height:72px; border-radius:50%; background:rgba(52,211,153,0.06); border:1px solid rgba(52,211,153,0.15); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; }
+.lo17-card h2 { font-size:1.6rem; font-weight:800; color:#f0fdf4; margin-bottom:0.5rem; }
+.lo17-card p { color:#064e3b; font-size:0.9rem; margin-bottom:2rem; }
+.lo17-actions { display:flex; gap:0.75rem; }
+.lo17-cancel { flex:1; padding:0.8rem; background:transparent; border:1px solid rgba(52,211,153,0.12); color:#065f46; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
+.lo17-cancel:hover { border-color:#34d399; color:#6ee7b7; }
+.lo17-confirm { flex:1; padding:0.8rem; background:linear-gradient(135deg,#059669,#34d399); border:none; color:#fff; border-radius:10px; font-size:0.9rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(52,211,153,0.3); }
+.lo17-done { display:flex; flex-direction:column; align-items:center; gap:0.5rem; text-align:center; z-index:1; }
+.lo17-done h3 { font-size:1.5rem; font-weight:800; color:#f0fdf4; margin-top:0.5rem; }
+.lo17-done p { color:#064e3b; font-size:0.9rem; margin-bottom:1rem; }
+.lo17-back { padding:0.8rem 2rem; background:transparent; border:1px solid rgba(52,211,153,0.2); color:#34d399; border-radius:10px; font-size:0.9rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.lo17-back:hover { background:rgba(52,211,153,0.06); }

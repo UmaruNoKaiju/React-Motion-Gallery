@@ -1,0 +1,201 @@
+.sc6-root {
+  min-height: 100vh;
+  background: #030b15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Aurora */
+.sc6-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sc6-aurora-1 {
+  position: absolute;
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(3,105,161,0.35) 0%, transparent 70%);
+  top: -80px; left: -100px;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.sc6-aurora-2 {
+  position: absolute;
+  width: 500px; height: 400px;
+  background: radial-gradient(ellipse, rgba(56,189,248,0.2) 0%, transparent 70%);
+  bottom: -100px; right: -80px;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.sc6-aurora-3 {
+  position: absolute;
+  width: 400px; height: 400px;
+  background: radial-gradient(ellipse, rgba(14,165,233,0.15) 0%, transparent 70%);
+  top: 40%; left: 30%;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+/* Contenido */
+.sc6-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  max-width: 460px;
+  width: 100%;
+}
+
+/* Typing */
+.sc6-typing-wrap { width: 100%; }
+
+.sc6-typing-label {
+  display: block;
+  color: #4d7a9e;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.sc6-typing-box {
+  background: rgba(56,189,248,0.05);
+  border: 1px solid rgba(56,189,248,0.2);
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sc6-typed {
+  font-family: monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.1em;
+}
+
+.sc6-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.4rem;
+  background: #38bdf8;
+  border-radius: 1px;
+}
+
+/* Check */
+.sc6-check-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc6-sparkle {
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  background: linear-gradient(to top, #38bdf8, transparent);
+  border-radius: 2px;
+  top: 50%; left: 50%;
+  transform-origin: bottom center;
+  margin-top: -70px;
+  margin-left: -1.5px;
+}
+
+/* Texto final */
+.sc6-final { width: 100%; }
+
+.sc6-glitch {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #f0f9ff;
+  position: relative;
+  margin-bottom: 0.2rem;
+}
+
+.sc6-glitch::before,
+.sc6-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+}
+
+.sc6-glitch::before {
+  color: #38bdf8;
+  animation: glitch1 3s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+}
+
+.sc6-glitch::after {
+  color: #7dd3fc;
+  animation: glitch2 3s infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch1 {
+  0%, 90%, 100% { transform: translate(0); opacity: 0; }
+  92% { transform: translate(-3px, 1px); opacity: 0.6; }
+  94% { transform: translate(3px, -1px); opacity: 0.6; }
+  96% { transform: translate(0); opacity: 0; }
+}
+
+@keyframes glitch2 {
+  0%, 90%, 100% { transform: translate(0); opacity: 0; }
+  93% { transform: translate(3px, 1px); opacity: 0.5; }
+  95% { transform: translate(-3px, -1px); opacity: 0.5; }
+  97% { transform: translate(0); opacity: 0; }
+}
+
+.sc6-final h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #38bdf8, #bfdbfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.8rem;
+}
+
+.sc6-final p {
+  color: #4d7a9e;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.sc6-btn {
+  padding: 0.9rem 2.5rem;
+  background: rgba(56,189,248,0.08);
+  border: 1.5px solid #38bdf8;
+  color: #38bdf8;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sc6-btn:hover {
+  background: #38bdf8;
+  color: #030b15;
+}
+
+.sc6-btn-arrow { display: inline-block; }

@@ -1,0 +1,134 @@
+.lo7-root {
+  min-height: 100vh;
+  background: #030b15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lo7-blob {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #0891b2, #06b6d4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  pointer-events: none;
+  box-shadow: 0 0 60px rgba(6,182,212,0.6);
+}
+
+.lo7-card {
+  background: #071828;
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 60px rgba(6,182,212,0.08), 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lo7-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(6,182,212,0.08);
+  border: 1px solid rgba(6,182,212,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.lo7-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0f9ff;
+  margin-bottom: 0.5rem;
+}
+
+.lo7-card p {
+  color: #164e63;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.lo7-actions { display: flex; gap: 0.75rem; }
+
+.lo7-cancel {
+  flex: 1;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid rgba(6,182,212,0.15);
+  color: #164e63;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lo7-cancel:hover { border-color: #06b6d4; color: #67e8f9; }
+
+.lo7-confirm {
+  flex: 1;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #0891b2, #06b6d4);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(6,182,212,0.35);
+}
+
+/* Done — sobre fondo cyan */
+.lo7-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+  z-index: 30;
+  position: relative;
+}
+
+.lo7-overflow {
+  overflow: hidden;
+  line-height: 1.05;
+}
+
+.lo7-word {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.lo7-done p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.lo7-back {
+  padding: 0.8rem 2rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+}
