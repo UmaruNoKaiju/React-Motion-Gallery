@@ -3,19 +3,36 @@ import { useState, useEffect } from 'react';
 import './Screen7.css';
 
 const ORBIT_ICONS = [
-  { icon: '⚙️', radius: 110, speed: 6,  size: 1.6 },
-  { icon: '🔩', radius: 140, speed: 9,  size: 1.3 },
-  { icon: '🔧', radius: 90,  speed: 7,  size: 1.4 },
-  { icon: '🛞', radius: 160, speed: 11, size: 1.2 },
-  { icon: '🔑', radius: 120, speed: 8,  size: 1.3 },
-  { icon: '⛽', radius: 100, speed: 10, size: 1.1 },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+      </svg>
+    ), radius: 110, speed: 6, size: 32,
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2a4 4 0 0 1 4 4c0 .6-.1 1.2-.4 1.7l5.1 5.1a2 2 0 0 1 0 2.83l-1.42 1.42a2 2 0 0 1-2.83 0L11.3 11.9A4 4 0 1 1 12 2z"/>
+        <circle cx="12" cy="6" r="1" fill="#38bdf8"/>
+      </svg>
+    ), radius: 140, speed: 9, size: 28,
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+    ), radius: 90, speed: 7, size: 30,
+  },
 ];
 
 function OrbitalIcon({ icon, radius, speed, size, phase }) {
   return (
     <motion.div
       className="sc7-orbit-icon"
-      style={{ fontSize: `${size}rem` }}
+      style={{ width: size, height: size }}
       animate={phase === 0 ? {
         rotate: [0, 360],
         x: [radius, 0, -radius, 0, radius],
@@ -80,13 +97,16 @@ function CountdownRing({ phase }) {
   );
 }
 
-export default function Screen7({ onBack }) {
+const REDIRECT_URL = '';
+
+export default function Screen7() {
   const [phase, setPhase] = useState(0);
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase(1), 3200);
     const t2 = setTimeout(() => setPhase(2), 4000);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
+    const t3 = setTimeout(() => { if (REDIRECT_URL) window.location.href = REDIRECT_URL; }, 6000);
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
 
   return (
@@ -194,32 +214,7 @@ export default function Screen7({ onBack }) {
                 </div>
               ))}
 
-              <motion.div className="sc7-meta"
-                initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
-              >
-                <span className="sc7-meta-item">📋 KIT-2024-0847</span>
-                <span className="sc7-meta-dot">·</span>
-                <span className="sc7-meta-item">🔩 12 partes</span>
-                <span className="sc7-meta-dot">·</span>
-                <span className="sc7-meta-item">✅ Verificado</span>
-              </motion.div>
 
-              <motion.button className="sc7-btn"
-                initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5 }}
-                whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(56,189,248,0.5)' }}
-                whileTap={{ scale: 0.95 }}
-                onClick={onBack}
-              >
-                <motion.span
-                  animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                  className="sc7-btn-inner"
-                >
-                  Ver inventario
-                </motion.span>
-              </motion.button>
             </div>
           </motion.div>
         )}
