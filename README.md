@@ -135,6 +135,6 @@ MIT © [UmaruNoKaiju](https://github.com/UmaruNoKaiju)
 
 <div align="center">
 
-Hecho con ❤️ y mucho café · [⭐ Dale una estrella si te gustó](https://github.com/UmaruNoKaiju/react-motion-gallery)
+Te gusto? [⭐ Dale una estrella si te gustó](https://github.com/UmaruNoKaiju/react-motion-gallery)
 
 </div>
